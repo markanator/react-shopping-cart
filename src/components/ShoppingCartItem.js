@@ -4,7 +4,7 @@ import React,{useContext} from 'react';
 import ProductContext from '../contexts/ProductContext';
 
 const Item = props => {
-	const {products,removeItem} = useContext(ProductContext);
+	const {removeItem} = useContext(ProductContext);
 
 	return (
 		<div className="shopping-cart_item">
@@ -13,7 +13,7 @@ const Item = props => {
 				<h1>{props.title}</h1>
 				<p>$ {props.price}</p>
 				<button onClick={()=>{
-					removeItem()
+					removeItem(props.id)
 					// console.log("remove clicked", products.removeItem);
 				}}>Remove from cart</button>
 			</div>

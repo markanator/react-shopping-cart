@@ -24,10 +24,8 @@ function App() {
         ])
 	};
 	
-    const removeItem = item => {
-        setCart(cart.filter((book,index) => {
-            return book.id !== cart.id;
-        }))
+    const removeItem = itemId => {
+        setCart(cart.filter((book) => book.id !== itemId))
     };
 
     return (
